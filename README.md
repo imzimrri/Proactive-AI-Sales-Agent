@@ -2,6 +2,9 @@
 
 An AI-powered phone calling system that automates outbound sales calls using VAPI.ai, OpenAI's GPT models, and Twilio for voice communication. This project enables businesses to proactively reach out to potential customers with personalized AI-driven conversations.
 
+Here is our presenation slides: https://gamma.app/docs/Proactive-AI-Sales-Agent-fw368mwejmic751 
+Here is our demo video: https://youtu.be/nJYa54wTWbA
+
 ## Features
 
 - **Web Form Integration**: Simple HTML form for collecting customer information (name and phone number)
