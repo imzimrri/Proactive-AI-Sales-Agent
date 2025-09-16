@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proactive AI Sales Agent</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f4f4f9; color: #333; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { max-width: 500px; text-align: center; padding: 40px; background: #fff; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+        h2 { color: #333; }
+        p { color: #666; margin-bottom: 20px; }
+        input { width: calc(100% - 20px); padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px; }
+        button { width: 100%; padding: 12px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Book a Free Consultation</h2>
+        <p>Enter your details below, and our AI assistant will call you immediately to book your slot.</p>
+        <form action="/call" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="+15551234567" required pattern="\+[1-9]\d{1,14}" title="Phone number must be in E.164 format, starting with a + and country code.">
+            <p style="font-size: 12px; color: #777; margin-top: -10px; text-align: left;">Please include your country code (e.g., +1 for the US).</p>
+            <button type="submit">Call Me Now</button>
+        </form>
+    </div>
+</body>
+</html>

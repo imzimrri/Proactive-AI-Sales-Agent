@@ -1,0 +1,19 @@
+# Environment variables
+.env
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE / Tooling
+.idea/
+.vscode/
+.bmad-core/
+.gemini/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
