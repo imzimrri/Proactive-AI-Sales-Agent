@@ -69,6 +69,17 @@ def trigger_call(phone_number_to_call, customer_name="Valued Customer"):
         response = requests.post(VAPI_API_URL, headers=headers, json=payload)
         if response.status_code == 201:
             print(f"✅ Success! Call initiated to {customer_name}.")
+            print("Response Body:", response.text)  # Debug: Print full response
+            # Fetch call details to check status
+            call_data = response.json()
+            call_id = call_data.get("id")
+            if call_id:
+                status_url = f"https://api.vapi.ai/call/{call_id}"
+                status_response = requests.get(status_url, headers=headers)
+                if status_response.status_code == 200:
+                    print("Call Status Details:", status_response.text)
+                else:
+                    print(f"Failed to fetch call status: {status_response.status_code}")
             return True
         else:
             print(f"❌ Error: Received status code {response.status_code}")
